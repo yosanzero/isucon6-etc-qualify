@@ -1,0 +1,17 @@
+TARGETS = unattended-upgrades rsyslog open-vm-tools lvm2-lvmetad lxd uuidd lvm2-lvmpolld lxcfs killprocs apport atd mysql mdadm irqbalance single dbus cron acpid rsync ssh nginx plymouth ondemand rc.local grub-common
+INTERACTIVE =
+atd: rsyslog
+mysql: rsyslog
+mdadm: rsyslog
+irqbalance: rsyslog
+single: killprocs
+dbus: rsyslog
+cron: rsyslog
+acpid: rsyslog
+rsync: rsyslog
+ssh: rsyslog
+nginx: rsyslog
+plymouth: unattended-upgrades atd rsyslog open-vm-tools lvm2-lvmetad lxd mysql uuidd mdadm lvm2-lvmpolld irqbalance lxcfs dbus apport cron acpid rsync ssh nginx
+ondemand: unattended-upgrades atd rsyslog open-vm-tools lvm2-lvmetad lxd mysql uuidd mdadm lvm2-lvmpolld irqbalance lxcfs dbus apport cron acpid rsync ssh nginx
+rc.local: unattended-upgrades atd rsyslog open-vm-tools lvm2-lvmetad lxd mysql uuidd mdadm lvm2-lvmpolld irqbalance lxcfs dbus apport cron acpid rsync ssh nginx
+grub-common: unattended-upgrades atd rsyslog open-vm-tools lvm2-lvmetad lxd mysql uuidd mdadm lvm2-lvmpolld irqbalance lxcfs dbus apport cron acpid rsync ssh nginx
